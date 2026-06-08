@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shift Left Security | Grupo 9 · DevSecOps Ágil</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Botón toggle para móvil -->
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menú">☰</button>
+
+<!-- ══════════════════════════════════════
+     SIDEBAR DE NAVEGACIÓN
+══════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar">
+
+  <div class="sidebar-logo">
+    <span class="sidebar-logo-text">Blog Shift Left Security</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <span class="sidebar-nav-label">Contenido</span>
+    <ul>
+      <li><a href="#datos"><span class="nav-num">00</span>Datos del sitio</a></li>
+      <li><a href="#intro"><span class="nav-num">01</span>Introducción</a></li>
+      <li><a href="#que-es"><span class="nav-num">02</span>¿Qué es?</a></li>
+      <li><a href="#problema"><span class="nav-num">03</span>Beneficios</a></li>
+      <li><a href="#sprints"><span class="nav-num">04</span>Sprints</a></li>
+      <li><a href="#codigo"><span class="nav-num">05</span>Código</a></li>
+      <li><a href="#reflexion"><span class="nav-num">06</span>Reflexión</a></li>
+    </ul>
+
+    
+    </div>
+  </nav>
+
+  <div class="sidebar-team">
+    <span class="sidebar-team-label">Equipo — Grupo 9</span>
+    <div class="sidebar-member">
+      <div class="sidebar-member-avatar">
+        <img src="FotoGregorio.jpeg" alt="Stalin Gregorio">
+      </div>
+      <div class="sidebar-member-info">
+        <div class="name">Stalin Mendieta</div>
+        <div class="role">Desarrollador</div>
+      </div>
+    </div>
+    <div class="sidebar-member">
+      <div class="sidebar-member-avatar">
+        <img src="Fotoleo.jpeg" alt="Leonardo Zambrano">
+      </div>
+      <div class="sidebar-member-info">
+        <div class="name">Leonardo Zambrano</div>
+        <div class="role">Desarrollador</div>
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- ══════════════════════════════════════
+     CONTENIDO PRINCIPAL
+══════════════════════════════════════ -->
+<div class="main-content">
+
+  <!-- BANNER INSTITUCIONAL -->
+  <div class="inst-banner">
+    <div class="inst-left">
+      <div class="inst-seal"><img src="https://aulavirtualmoodle.uleam.edu.ec/pluginfile.php/1/theme_academi/logo/1780276595/favicon_ULEAM_2.png" alt="ULEAM Logo"></div>
+      <div class="inst-text">
+        <div class="uni">Universidad Laica Eloy Alfaro de Manabí</div>
+        <div class="ext">Extensión Chone &nbsp;·&nbsp; Ingeniería en Software &nbsp;·&nbsp; Sexto Semestre</div>
+      </div>
+    </div>
+    <div class="inst-right">
+      <span class="inst-pill">Seguridad en Software</span>
+      <span class="inst-pill">Grupo 9</span>
+      <span class="inst-pill">2025</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-modern">
+    <div class="hero-inner" style="display:flex;align-items:center;justify-content:space-between;gap:2.5rem;">
+      <div style="flex:1;min-width:0;">
+        <div class="hero-tag-modern">✦ Seguridad en el Desarrollo de Software</div>
+        <h1>Shift Left<br><span>Security</span></h1>
+        <p>Seguridad desde el inicio del desarrollo de software</p>
+        <div class="hero-pills">
+          <span class="hero-pill">DevSecOps</span>
+          <span class="hero-pill">OWASP Top 10</span>
+          <span class="hero-pill">Agile Security</span>
+          <span class="hero-pill">CI/CD</span>
+        </div>
+      </div>
+      <div style="flex:0 0 300px;display:flex;flex-direction:column;align-items:center;gap:0.7rem;">
+        <div style="display:flex;align-items:center;">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:88px;height:62px;background:#3b8fc2;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%);">
+            <span style="font-size:1.3rem;line-height:1;margin-bottom:2px;">⌨️</span>
+            <span style="font-size:0.55rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.4px;">Código</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:88px;height:62px;background:#5dade2;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%,14% 50%);margin-left:-10px;">
+            <span style="font-size:1.3rem;line-height:1;margin-bottom:2px;">🐛</span>
+            <span style="font-size:0.55rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.4px;">Pruebas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:88px;height:62px;background:#7cb9e8;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%,14% 50%);margin-left:-10px;">
+            <span style="font-size:1.3rem;line-height:1;margin-bottom:2px;">🚀</span>
+            <span style="font-size:0.55rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.4px;">Deploy</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <span style="font-size:0.65rem;font-weight:700;color:#2c577a;">← Shift Left</span>
+          <div style="height:2px;width:60px;background:#7cb9e8;border-radius:2px;"></div>
+          <div style="width:34px;height:34px;border-radius:50%;background:white;border:2px solid #5dade2;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 3px 10px rgba(93,173,226,0.22);">🛡️</div>
+          <div style="height:2px;width:60px;background:#7cb9e8;border-radius:2px;"></div>
+        </div>
+        <p style="font-size:0.78rem;color:#3a5a72;text-align:center;line-height:1.5;max-width:280px;margin:0;">
+          <strong style="color:#1c3a4f;">Lleva la seguridad</strong> lo más temprano posible dentro del ciclo de desarrollo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page">
+
+    <!-- 00 · DATOS DEL SITIO -->
+    <div class="section" id="datos">
+      <div class="section-label">00 · Datos del sitio</div>
+      <h2>Información del proyecto</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2.5rem;">
+        <div style="background:#f4faff;border:1px solid #d4e9f7;border-radius:16px;padding:1.2rem 1.4rem;">
+          <div style="font-size:0.62rem;font-family:'Roboto Mono',monospace;color:#5dade2;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:0.4rem;">Universidad</div>
+          <div style="font-size:0.88rem;font-weight:700;color:#1e3a4d;line-height:1.35;">Universidad Laica Eloy Alfaro de Manabí</div>
+        </div>
+        <div style="background:#f4faff;border:1px solid #d4e9f7;border-radius:16px;padding:1.2rem 1.4rem;">
+          <div style="font-size:0.62rem;font-family:'Roboto Mono',monospace;color:#5dade2;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:0.4rem;">Extensión / Campus</div>
+          <div style="font-size:0.88rem;font-weight:700;color:#1e3a4d;">Extensión Chone</div>
+        </div>
+        <div style="background:#f4faff;border:1px solid #d4e9f7;border-radius:16px;padding:1.2rem 1.4rem;">
+          <div style="font-size:0.62rem;font-family:'Roboto Mono',monospace;color:#5dade2;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:0.4rem;">Carrera</div>
+          <div style="font-size:0.88rem;font-weight:700;color:#1e3a4d;">Ingeniería en Software</div>
+        </div>
+        <div style="background:#f4faff;border:1px solid #d4e9f7;border-radius:16px;padding:1.2rem 1.4rem;">
+          <div style="font-size:0.62rem;font-family:'Roboto Mono',monospace;color:#5dade2;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:0.4rem;">Semestre</div>
+          <div style="font-size:0.88rem;font-weight:700;color:#1e3a4d;">Sexto Semestre</div>
+        </div>
+      </div>
+
+      <span class="section-subhead">Equipo de Desarrollo</span>
+
+      <div class="authors-grid">
+        <div class="author-card">
+          <div class="author-top">
+            <div class="author-avatar">
+              <img src="FotoGregorio.jpeg" alt="Stalin Gregorio">
+            </div>
+            <div>
+              <div class="author-name">Stalin Gregorio Mendieta Hidalgo</div>
+              <div class="author-role">Desarrollador</div>
+            </div>
+          </div>
+          <p class="author-bio">
+            Estudiante de Ingeniería en Software apasionado por la tecnología, el desarrollo web y la inteligencia artificial. Me gusta aprender nuevas herramientas, enfrentar desafíos de programación y participar en proyectos que me permitan mejorar mis habilidades técnicas. Mi objetivo es seguir creciendo como desarrollador y adquirir experiencia en áreas como desarrollo full stack, bases de datos y tecnologías innovadoras que aporten soluciones útiles a las personas.
+          </p>
+          <div class="author-tags">
+            <span class="author-tag">SQL</span>
+            <span class="author-tag">Backend</span>
+            <span class="author-tag">IA</span>
+          </div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-top">
+            <div class="author-avatar">
+              <img src="Fotoleo.jpeg" alt="Leonardo Zambrano">
+            </div>
+            <div>
+              <div class="author-name">Leonardo Bladimir Zambrano Mendoza</div>
+              <div class="author-role">Desarrollador</div>
+            </div>
+          </div>
+          <p class="author-bio">
+            Estudiante de Ingeniería en Software con enfoque en desarrollo web. Apasionado por la creación de sitios y aplicaciones web funcionales, intuitivas y orientadas a la experiencia del usuario. Interesado en la aplicación de buenas prácticas de programación, el diseño de interfaces modernas y el desarrollo de soluciones eficientes para entornos digitales. Su perfil profesional se orienta hacia el desarrollo frontend y backend, así como la construcción de aplicaciones web escalables y de alto rendimiento.
+          </p>
+          <div class="author-tags">
+            <span class="author-tag">OWASP</span>
+            <span class="author-tag">Pentest</span>
+            <span class="author-tag">DAST</span>
+            <span class="author-tag">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01 · INTRO -->
+    <div class="section" id="intro">
+      <div class="section-label">01 · Introducción</div>
+      <h2>¿Por qué seguridad desde el inicio?</h2>
+      <p>La seguridad informática es uno de los aspectos más importantes durante el desarrollo de software. Tradicionalmente, las pruebas de seguridad se realizaban al final del proyecto, lo que generaba mayores costos y retrasos al encontrar vulnerabilidades. Para solucionar este problema surge el enfoque <strong>Shift Left Security</strong>, que propone integrar la seguridad desde las primeras etapas del desarrollo, permitiendo detectar y corregir errores antes de que lleguen a producción.</p>
+    </div>
+
+    <!-- 02 · QUÉ ES -->
+    <div class="section" id="que-es">
+      <div class="section-label">02 · Definición & principios</div>
+      <h2>¿Qué es Shift Left Security?</h2>
+      <div class="def-grid">
+        <div class="def-card">
+          <div class="def-source">📘 Kilonzi & Kilonzi, 2026</div>
+          <p>La seguridad Shift Left es un enfoque de desarrollo de software que busca incorporar las actividades de seguridad desde las primeras etapas del ciclo de vida del desarrollo (SDLC). Su objetivo es detectar vulnerabilidades, errores de configuración y otros riesgos antes de que el software llegue a producción, permitiendo corregirlos con menor costo, esfuerzo y tiempo. Además, fomenta la colaboración entre los equipos de desarrollo y seguridad para que la protección de las aplicaciones sea una responsabilidad compartida durante todo el proceso.</p>
+        </div>
+        <div class="def-card">
+          <div class="def-source">🔒 Illumio, 2025</div>
+          <p>La seguridad Shift Left es una estrategia proactiva que integra controles y prácticas de seguridad desde las fases iniciales de diseño y programación, en lugar de esperar a las etapas de prueba o implementación. Este enfoque permite identificar y solucionar problemas de seguridad de manera temprana, reducir riesgos y agilizar la entrega de software, convirtiendo la seguridad en una parte natural del trabajo diario de los desarrolladores y de las prácticas DevSecOps.</p>
+        </div>
+      </div>
+      <span class="section-subhead">5 Principios clave de Shift Left Security</span>
+      <div class="principles">
+        <div class="pr-item"><div class="pr-num">1</div><div class="pr-body"><strong>Automatización de pruebas de seguridad en CI/CD</strong><p>Ejecutar pruebas de seguridad automáticas cada vez que se realizan cambios en el código, detectando problemas sin esperar pruebas finales.</p></div></div>
+        <div class="pr-item"><div class="pr-num">2</div><div class="pr-body"><strong>Escaneo de código estático (SAST) desde la etapa de desarrollo</strong><p>Análisis del código fuente mientras se programa para encontrar vulnerabilidades antes de ejecutar la aplicación.</p></div></div>
+        <div class="pr-item"><div class="pr-num">3</div><div class="pr-body"><strong>Integración de análisis de dependencias para evitar vulnerabilidades conocidas</strong><p>Revisar librerías y componentes externos para identificar versiones con fallos de seguridad conocidos.</p></div></div>
+        <div class="pr-item"><div class="pr-num">4</div><div class="pr-body"><strong>Uso de controles de acceso y gestión de secretos en pipelines</strong><p>Proteger credenciales, contraseñas y datos sensibles durante el proceso de desarrollo y despliegue.</p></div></div>
+        <div class="pr-item"><div class="pr-num">5</div><div class="pr-body"><strong>Auditoría y monitoreo continuo de la infraestructura</strong><p>Supervisar constantemente sistemas y recursos para detectar actividades sospechosas o posibles amenazas.</p></div></div>
+      </div>
+      <div class="cite-note">Este enfoque según Ｔｎξｃｏｍ (2025) reduce costos y tiempos de remediación, ya que corregir una vulnerabilidad en producción es mucho más costoso que hacerlo en la fase de desarrollo.</div>
+    </div>
+    <div class="video-container">
+      <span class="section-subhead">Video explicativo:</span>
+      <video controls width="100%" preload="metadata" src="../video_left.mp4">
+        <source src="../video_left.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+    <!-- 03 · BENEFICIOS -->
+    <div class="section" id="problema">
+      <div class="section-label">03 · Beneficios estratégicos</div>
+      <h2>Beneficios de adoptar Shift Left Security</h2>
+      <p>Adoptar una estrategia de desplazamiento a la izquierda aporta varios beneficios significativos a la postura de seguridad del software de una organización, según Check Point Software (2024):</p>
+      <div class="benefits">
+        <div class="benefit-card"><span class="icon">💰</span><strong>Eficiencia de costos</strong><p>Detectar vulnerabilidades desde el principio reduce costos de remediación. La identificación temprana evita acciones costosas tras la implementación.</p></div>
+        <div class="benefit-card"><span class="icon">🚀</span><strong>Ciclos de lanzamiento más rápidos</strong><p>Mantener el ritmo de Agile, DevOps y DevSecOps, abordando la seguridad concurrentemente con otras tareas.</p></div>
+        <div class="benefit-card"><span class="icon">🤝</span><strong>Colaboración mejorada</strong><p>Integración entre desarrollo, QA y seguridad para abordar problemas de forma eficaz desde el inicio.</p></div>
+        <div class="benefit-card"><span class="icon">📋</span><strong>Cumplimiento mejorado</strong><p>Demostrar cumplimiento con normativas como RGPD o HIPAA, evitando multas y daños reputacionales.</p></div>
+      </div>
+      <p class="cite-small">Fuente: Check Point Software, 2024.</p>
+    </div>
+
+    <!-- 04 · SPRINTS -->
+    <div class="section" id="sprints">
+      <div class="section-label">04 · Seguridad en sprints ágiles</div>
+      <h2>Seguridad integrada en cada Sprint</h2>
+      <p>En un flujo ágil, Shift Left Security asigna actividades de seguridad específicas a cada sprint, haciendo que la seguridad forme parte del <em>Definition of Done</em> de cada historia de usuario.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Sprint</th><th>Actividad</th><th>Seguridad aplicada</th><th>Tipo</th></tr></thead>
+          <tbody>
+            <tr><td>Sprint 1</td><td>Login de usuario</td><td>Validación de entradas, protección contra inyección SQL, almacenamiento seguro de contraseñas mediante hashing y control de intentos fallidos de acceso.</td><td>SAST</td></tr>
+            <tr><td>Sprint 2</td><td>Carga y lectura de archivos</td><td>Validación de nombres y rutas de archivos, restricción de directorios permitidos y control de extensiones para evitar ataques de Path Traversal.</td><td>SAST / Review</td></tr>
+            <tr><td>Sprint 3</td><td>API REST de usuarios</td><td>Implementación de autenticación mediante JWT, validación de tokens, control de acceso por roles y limitación de solicitudes para prevenir abusos.</td><td>DAST</td></tr>
+            <tr><td>Sprint 4</td><td>Panel de administración</td><td>Protección contra ataques CSRF, aplicación de políticas de seguridad de contenido (CSP), configuración de cabeceras seguras y monitoreo de accesos.</td><td>Pentest</td></tr>
+            <tr><td>Sprint 5</td><td>Módulo de pagos</td><td>Cifrado de datos durante la transmisión y almacenamiento, protección de información sensible y cumplimiento de buenas prácticas de seguridad financiera.</td><td>DAST / Pentest</td></tr>
+            <tr><td>Sprint 6</td><td>Reportes y exportación de datos</td><td>Validación de parámetros de consulta, prevención de ataques XSS y sanitización de datos antes de ser exportados o mostrados al usuario.</td><td>SAST / Review</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 05 · CÓDIGO -->
+    <div class="section" id="codigo">
+  <div class="section-label">05 · Vulnerabilidad real → código seguro</div>
+  <h2>Del código vulnerable al código seguro</h2>
+
+  <span class="section-subhead"> Código Vulnerable — Grupo 9</span>
+  <div class="code-wrap">
+    <div class="code-header vuln">⚠ Código Vulnerable</div>
+<pre><span class="cmt">// Sin validaciones de seguridad — lectura de archivos del servidor</span>
+<span class="type">String</span> archivo = request.getParameter(<span class="str">"archivo"</span>);
+<span class="danger">File file = new File("/docs/" + archivo);  // PATH TRAVERSAL: el usuario controla la ruta</span>
+<span class="type">BufferedReader</span> br = <span class="kw">new</span> <span class="type">BufferedReader</span>(<span class="kw">new</span> <span class="type">FileReader</span>(file));
+<span class="type">String</span> line;
+<span class="kw">while</span>((line = br.readLine()) != <span class="kw">null</span>){
+    out.println(line);  <span class="cmt">// Sin escapar HTML → XSS potencial</span>
+}
+<span class="cmt">// Sin try-catch → el servidor puede mostrar rutas internas al fallar</span>
+<span class="cmt">// Sin verificar si el usuario tiene permiso de leer ese archivo</span></pre>
+  </div>
+
+  <span class="section-subhead">🧪 Tabla de Análisis de Vulnerabilidades</span>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Vulnerabilidad</th><th>Evidencia en el código</th><th>OWASP Top 10</th><th>Tipo de prueba</th><th>¿Manual / Automática?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Path Traversal</td>
+          <td><code class="ic">new File("/docs/" + archivo)</code> — el parámetro va directo a la ruta sin filtro</td>
+          <td>A01:2021 – Broken Access Control</td>
+          <td>Prueba con <code class="ic">../../etc/passwd</code></td>
+          <td>Manual / Automática (SAST)</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Entrada sin validar</td>
+          <td><code class="ic">request.getParameter("archivo")</code> acepta cualquier valor sin verificarlo</td>
+          <td>A03:2021 – Injection</td>
+          <td>Prueba de valores nulos y caracteres especiales</td>
+          <td>Automática (SAST)</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>XSS (Cross-Site Scripting)</td>
+          <td><code class="ic">out.println(line)</code> imprime el contenido sin escapar HTML</td>
+          <td>A03:2021 – Injection (XSS)</td>
+          <td>Inyección de etiquetas HTML en el archivo</td>
+          <td>Manual + Automática (DAST)</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Exposición de información sensible</td>
+          <td>Sin <code class="ic">try-catch</code>: si falla, el error puede mostrar rutas del servidor</td>
+          <td>A05:2021 – Security Misconfiguration</td>
+          <td>Revisión de código</td>
+          <td>Manual</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Sin control de acceso</td>
+          <td>No se verifica si el usuario tiene permiso antes de leer el archivo</td>
+          <td>A01:2021 – Broken Access Control</td>
+          <td>Revisión / Prueba de acceso directo</td>
+          <td>Manual</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="section-subhead"> Propuesta de Código Seguro (Mejorado)</span>
+  <div class="code-wrap">
+    <div class="code-header safe">✓ Código Seguro — Shift Left aplicado</div>
+<pre><span class="cmt">// CÓDIGO MEJORADO — Shift Left Security aplicado — Grupo 9</span>
+<span class="kw">import</span> org.apache.commons.text.StringEscapeUtils;
+<span class="kw">import</span> java.nio.file.*;
+
+<span class="cmt">// 1. Verificar que el usuario esté autenticado</span>
+<span class="kw">if</span> (!isAuthenticated(request)) {
+    response.sendError(HttpServletResponse.SC_UNAUTHORIZED); <span class="kw">return</span>;
+}
+
+<span class="cmt">// 2. Recibir y validar el parámetro con lista blanca (solo letras, números, guiones y puntos)</span>
+<span class="type">String</span> archivoParam = request.getParameter(<span class="str">"archivo"</span>);
+<span class="kw">if</span> (archivoParam == <span class="kw">null</span> || !archivoParam.matches(<span class="str">"[a-zA-Z0-9_\\-\\.]{1,100}"</span>)) {
+    response.sendError(HttpServletResponse.SC_BAD_REQUEST); <span class="kw">return</span>;
+}
+
+<span class="cmt">// 3. Verificar que la ruta resultante esté dentro de /docs/</span>
+<span class="type">Path</span> baseDir = Paths.get(<span class="str">"/docs/"</span>).toRealPath();
+<span class="type">Path</span> filePath = baseDir.resolve(archivoParam).normalize();
+<span class="kw">if</span> (!filePath.startsWith(baseDir)) {
+    response.sendError(HttpServletResponse.SC_FORBIDDEN); <span class="kw">return</span>;
+}
+
+<span class="cmt">// 4. Leer el archivo con manejo de errores y escapar el output</span>
+<span class="kw">try</span> (BufferedReader br = Files.newBufferedReader(filePath)) {
+    <span class="type">String</span> line;
+    <span class="kw">while</span>((line = br.readLine()) != <span class="kw">null</span>){
+        <span class="good">out.println(StringEscapeUtils.escapeHtml4(line)); // Anti-XSS</span>
+    }
+} <span class="kw">catch</span> (IOException e) {
+    logger.error(<span class="str">"Error leyendo archivo: {}"</span>, filePath, e);
+    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+}</pre>
+  </div>
+
+  <span class="section-subhead">Mejoras aplicadas y su Principio Shift Left</span>
+  <div class="mejoras">
+    <div class="mejora">
+      <span class="mejora-icon">🔐</span>
+      <div><strong>Autenticación primero</strong><p>Se verifica que el usuario esté logueado antes de hacer cualquier cosa. Principio: Secure by Default.</p></div>
+    </div>
+    <div class="mejora">
+      <span class="mejora-icon">✅</span>
+      <div><strong>Validación con lista blanca</strong><p>Solo se aceptan nombres de archivo con caracteres seguros. Detectado con SAST desde el desarrollo.</p></div>
+    </div>
+    <div class="mejora">
+      <span class="mejora-icon">🛡️</span>
+      <div><strong>Prevención de Path Traversal</strong><p>Se comprueba que la ruta final esté dentro de <code class="ic">/docs/</code> usando <code class="ic">getCanonicalPath()</code>.</p></div>
+    </div>
+    <div class="mejora">
+      <span class="mejora-icon">🔏</span>
+      <div><strong>Escape de salida (anti-XSS)</strong><p><code class="ic">escapeHtml4()</code> convierte caracteres peligrosos antes de mostrarlos al usuario.</p></div>
+    </div>
+    <div class="mejora">
+      <span class="mejora-icon">📝</span>
+      <div><strong>Registro de errores (logging)</strong><p>Los errores se guardan en el log del servidor, no se muestran al usuario.</p></div>
+    </div>
+    <div class="mejora">
+      <span class="mejora-icon">⚠️</span>
+      <div><strong>Manejo seguro de excepciones</strong><p>El <code class="ic">try-catch</code> evita que información interna del sistema quede expuesta.</p></div>
+    </div>
+  </div>
+</div>
+    <!-- 06 · REFLEXIÓN -->
+<div class="section" id="reflexion">
+  <div class="section-label">06 · Reflexión crítica</div>
+  <h2>Reflexiones del equipo</h2>
+
+  <div class="quote">
+    "La seguridad debe formar parte del desarrollo desde el inicio para evitar problemas futuros."
+  </div>
+
+  <span class="section-subhead"> Reflexión 1 — Stalin Mendieta</span>
+  <p>
+    Durante esta actividad comprendí que muchas vulnerabilidades pueden aparecer por errores simples, como no validar los datos que ingresa el usuario. Shift Left Security ayuda a identificar estos problemas desde las primeras etapas del desarrollo, lo que permite ahorrar tiempo y evitar riesgos cuando la aplicación ya está en funcionamiento.
+  </p>
+
+  <span class="section-subhead"> Reflexión 2 — Leonardo Zambrano</span>
+  <p>
+    Este tema me permitió entender que la seguridad no debe verse como una tarea final, sino como una responsabilidad presente en cada sprint. Aplicar buenas prácticas desde el inicio contribuye a crear aplicaciones más seguras, confiables y preparadas para enfrentar posibles amenazas.
+  </p>
+
+</div>
+
+  </div><!-- /page -->
+
+  <footer>
+    <span>Shift Left Security</span> — Grupo 9 &nbsp;·&nbsp; Stalin Mendieta &amp; Leonardo Zambrano
+    <span class="sub">Universidad Laica Eloy Alfaro de Manabí · Extensión Chone · Ingeniería en Software · Sexto Semestre</span>
+    
+  </footer>
+
+</div><!-- /main-content -->
+
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+
+  // Cerrar sidebar al hacer clic en un link (en móvil)
+  document.querySelectorAll('.sidebar-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 860) {
+        document.getElementById('sidebar').classList.remove('open');
+      }
+    });
+  });
+
+  // Marcar link activo al hacer scroll
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
