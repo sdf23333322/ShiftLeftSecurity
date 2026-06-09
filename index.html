@@ -379,27 +379,27 @@
   <span class="section-subhead">Mejoras aplicadas y su Principio Shift Left</span>
   <div class="mejoras">
     <div class="mejora">
-      <span class="mejora-icon">🔐</span>
+      <span class="mejora-icon"></span>
       <div><strong>Autenticación primero</strong><p>Se verifica que el usuario esté logueado antes de hacer cualquier cosa. Principio: Secure by Default.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon">✅</span>
+      <span class="mejora-icon"></span>
       <div><strong>Validación con lista blanca</strong><p>Solo se aceptan nombres de archivo con caracteres seguros. Detectado con SAST desde el desarrollo.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon">🛡️</span>
+      <span class="mejora-icon"></span>
       <div><strong>Prevención de Path Traversal</strong><p>Se comprueba que la ruta final esté dentro de <code class="ic">/docs/</code> usando <code class="ic">getCanonicalPath()</code>.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon">🔏</span>
+      <span class="mejora-icon"></span>
       <div><strong>Escape de salida (anti-XSS)</strong><p><code class="ic">escapeHtml4()</code> convierte caracteres peligrosos antes de mostrarlos al usuario.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon">📝</span>
+      <span class="mejora-icon"></span>
       <div><strong>Registro de errores (logging)</strong><p>Los errores se guardan en el log del servidor, no se muestran al usuario.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon">⚠️</span>
+      <span class="mejora-icon"></span>
       <div><strong>Manejo seguro de excepciones</strong><p>El <code class="ic">try-catch</code> evita que información interna del sistema quede expuesta.</p></div>
     </div>
   </div>
