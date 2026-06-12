@@ -163,13 +163,7 @@
               <div class="author-role">Desarrollador</div>
             </div>
           </div>
-          <p class="author-bio">
-            Estudiante de Ingeniería en Software apasionado por la tecnología, el desarrollo web y la inteligencia artificial. Me gusta aprender nuevas herramientas, enfrentar desafíos de programación y participar en proyectos que me permitan mejorar mis habilidades técnicas. Mi objetivo es seguir creciendo como desarrollador y adquirir experiencia en áreas como desarrollo full stack, bases de datos y tecnologías innovadoras que aporten soluciones útiles a las personas.
-          </p>
-          <div class="author-tags">
-            <span class="author-tag">SQL</span>
-            <span class="author-tag">Backend</span>
-            <span class="author-tag">IA</span>
+         
           </div>
         </div>
 
@@ -183,13 +177,8 @@
               <div class="author-role">Desarrollador</div>
             </div>
           </div>
-          <p class="author-bio">
-            Estudiante de Ingeniería en Software con enfoque en desarrollo web. Apasionado por la creación de sitios y aplicaciones web funcionales, intuitivas y orientadas a la experiencia del usuario. Interesado en la aplicación de buenas prácticas de programación, el diseño de interfaces modernas y el desarrollo de soluciones eficientes para entornos digitales. Su perfil profesional se orienta hacia el desarrollo frontend y backend, así como la construcción de aplicaciones web escalables y de alto rendimiento.
-          </p>
-          <div class="author-tags">
-            <span class="author-tag">OWASP</span>
-            <span class="author-tag">DAST</span>
-            <span class="author-tag">Agiles</span>
+          
+            
           </div>
         </div>
       </div>
@@ -240,10 +229,10 @@
       <h2>Beneficios de adoptar Shift Left Security</h2>
       <p>Adoptar una estrategia de desplazamiento a la izquierda aporta varios beneficios significativos a la postura de seguridad del software de una organización, según Check Point Software (2024):</p>
       <div class="benefits">
-        <div class="benefit-card"><span class="icon"></span><strong>Eficiencia de costos</strong><p>Detectar vulnerabilidades desde el principio reduce costos de remediación. La identificación temprana evita acciones costosas tras la implementación.</p></div>
-        <div class="benefit-card"><span class="icon"></span><strong>Ciclos de lanzamiento más rápidos</strong><p>Mantener el ritmo de Agile, DevOps y DevSecOps, abordando la seguridad concurrentemente con otras tareas.</p></div>
-        <div class="benefit-card"><span class="icon"></span><strong>Colaboración mejorada</strong><p>Integración entre desarrollo, QA y seguridad para abordar problemas de forma eficaz desde el inicio.</p></div>
-        <div class="benefit-card"><span class="icon"></span><strong>Cumplimiento mejorado</strong><p>Demostrar cumplimiento con normativas como RGPD o HIPAA, evitando multas y daños reputacionales.</p></div>
+        <div class="benefit-card"><span class="icon">💰</span><strong>Eficiencia de costos</strong><p>Detectar vulnerabilidades desde el principio reduce costos de remediación. La identificación temprana evita acciones costosas tras la implementación.</p></div>
+        <div class="benefit-card"><span class="icon">🚀</span><strong>Ciclos de lanzamiento más rápidos</strong><p>Mantener el ritmo de Agile, DevOps y DevSecOps, abordando la seguridad concurrentemente con otras tareas.</p></div>
+        <div class="benefit-card"><span class="icon">🤝</span><strong>Colaboración mejorada</strong><p>Integración entre desarrollo, QA y seguridad para abordar problemas de forma eficaz desde el inicio.</p></div>
+        <div class="benefit-card"><span class="icon">📋</span><strong>Cumplimiento mejorado</strong><p>Demostrar cumplimiento con normativas como RGPD o HIPAA, evitando multas y daños reputacionales.</p></div>
       </div>
       <p class="cite-small">Fuente: Check Point Software, 2024.</p>
     </div>
@@ -288,7 +277,7 @@
 <span class="cmt">// Sin verificar si el usuario tiene permiso de leer ese archivo</span></pre>
   </div>
 
-  <span class="section-subhead"> Tabla de Análisis de Vulnerabilidades</span>
+  <span class="section-subhead">🧪 Tabla de Análisis de Vulnerabilidades</span>
   <div class="table-wrap">
     <table>
       <thead>
@@ -379,27 +368,27 @@
   <span class="section-subhead">Mejoras aplicadas y su Principio Shift Left</span>
   <div class="mejoras">
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">🔐</span>
       <div><strong>Autenticación primero</strong><p>Se verifica que el usuario esté logueado antes de hacer cualquier cosa. Principio: Secure by Default.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">✅</span>
       <div><strong>Validación con lista blanca</strong><p>Solo se aceptan nombres de archivo con caracteres seguros. Detectado con SAST desde el desarrollo.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">🛡️</span>
       <div><strong>Prevención de Path Traversal</strong><p>Se comprueba que la ruta final esté dentro de <code class="ic">/docs/</code> usando <code class="ic">getCanonicalPath()</code>.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">🔏</span>
       <div><strong>Escape de salida (anti-XSS)</strong><p><code class="ic">escapeHtml4()</code> convierte caracteres peligrosos antes de mostrarlos al usuario.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">📝</span>
       <div><strong>Registro de errores (logging)</strong><p>Los errores se guardan en el log del servidor, no se muestran al usuario.</p></div>
     </div>
     <div class="mejora">
-      <span class="mejora-icon"></span>
+      <span class="mejora-icon">⚠️</span>
       <div><strong>Manejo seguro de excepciones</strong><p>El <code class="ic">try-catch</code> evita que información interna del sistema quede expuesta.</p></div>
     </div>
   </div>
